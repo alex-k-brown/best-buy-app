@@ -1,0 +1,738 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../usr/local/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*-- General Styles --*/
+@font-face {
+  font-family: pt-sans;
+  src: url(../resources/PT_Sans-Web-Regular.ttf);
+}
+@font-face {
+  font-family: pt-sans-bold;
+  src: url(../resources/PT_Sans-Web-Bold.ttf);
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+@keyframes rotateBack {
+  0% {
+    transform: rotate(135deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes social {
+  0% {
+    width: 5.4em;
+    margin: 0 .4em;
+  }
+  99% {
+    width: 5.4em;
+    margin: 0 .4em;
+  }
+  100% {
+    width: 0em;
+    margin: 0;
+  }
+}
+@keyframes socialBack {
+  0% {
+    width: 0em;
+    margin: 0em;
+  }
+  99% {
+    width: 0em;
+    margin: 0em;
+  }
+  100% {
+    width: 5.4em;
+    margin: 0 .4em;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes shrink {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}
+/* line 65, ../sass/_general.scss */
+.container {
+  width: 100%;
+  position: absolute;
+  font-size: 1vw;
+  height: 56.3em;
+  background-color: white;
+}
+/* line 72, ../sass/_general.scss */
+.container * {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: pt-sans, sans-serif;
+  transform-origin: 50% 50%;
+}
+
+@media all and (max-width: 600px) {
+  @keyframes social {
+    0% {
+      width: 8.4em;
+      margin: 0 .7em;
+    }
+    99% {
+      width: 8.4em;
+      margin: 0 .7em;
+    }
+    100% {
+      width: 0em;
+      margin: 0;
+    }
+  }
+  @keyframes socialBack {
+    0% {
+      width: 0em;
+      margin: 0em;
+    }
+    99% {
+      width: 0em;
+      margin: 0em;
+    }
+    100% {
+      width: 8.4em;
+      margin: 0 .7em;
+    }
+  }
+  /* line 94, ../sass/_general.scss */
+  .container {
+    height: 160em;
+  }
+}
+/*-- Header Styles --*/
+/* line 8, ../sass/_header.scss */
+.header {
+  width: 100%;
+  height: 11.2em;
+  background-color: #2c7dc9;
+}
+
+/* line 13, ../sass/_header.scss */
+.logo,
+.social {
+  position: absolute;
+}
+
+/* line 17, ../sass/_header.scss */
+.logo,
+.social-icon,
+.close {
+  cursor: pointer;
+}
+
+/* line 22, ../sass/_header.scss */
+.logo {
+  width: 11.9em;
+  height: 8.1em;
+  background-image: url("../resources/images/logo.png");
+  top: 1.2em;
+  left: 3.1em;
+}
+
+/* line 29, ../sass/_header.scss */
+.social {
+  background-color: white;
+  right: 0;
+  top: 1.9em;
+  padding: .8em .4em;
+  border-top-left-radius: 4em;
+  border-bottom-left-radius: 4em;
+}
+/* line 38, ../sass/_header.scss */
+.social.closed .close {
+  animation: rotate .25s ease-out 0s forwards;
+}
+/* line 42, ../sass/_header.scss */
+.social.closed .facebook {
+  background-image: url("../resources/images/facebook.png");
+  animation: social 0.05s linear 0s forwards;
+}
+/* line 42, ../sass/_header.scss */
+.social.closed .twitter {
+  background-image: url("../resources/images/twitter.png");
+  animation: social 0.1s linear 0s forwards;
+}
+/* line 42, ../sass/_header.scss */
+.social.closed .pinterest {
+  background-image: url("../resources/images/pinterest.png");
+  animation: social 0.15s linear 0s forwards;
+}
+/* line 42, ../sass/_header.scss */
+.social.closed .google {
+  background-image: url("../resources/images/google.png");
+  animation: social 0.2s linear 0s forwards;
+}
+/* line 42, ../sass/_header.scss */
+.social.closed .youtube {
+  background-image: url("../resources/images/youtube.png");
+  animation: social 0.25s linear 0s forwards;
+}
+
+/* line 49, ../sass/_header.scss */
+.social-icon,
+.close {
+  margin: 0 .4em;
+  border-radius: 100%;
+  position: relative;
+  display: inline-block;
+  background-size: cover;
+}
+
+/* line 57, ../sass/_header.scss */
+.social-icon {
+  width: 5.4em;
+  height: 5.4em;
+}
+
+/* line 61, ../sass/_header.scss */
+.close {
+  width: 3.2em;
+  height: 3.2em;
+  vertical-align: top;
+  margin: 1.1em .8em 1.1em 1.2em;
+  background-image: url("../resources/images/close.png");
+  animation: rotateBack .25s ease-out 0s forwards;
+}
+
+/* line 71, ../sass/_header.scss */
+.facebook {
+  background-image: url("../resources/images/facebook.png");
+  animation: socialBack 0.05s linear 0s forwards;
+}
+
+/* line 71, ../sass/_header.scss */
+.twitter {
+  background-image: url("../resources/images/twitter.png");
+  animation: socialBack 0.1s linear 0s forwards;
+}
+
+/* line 71, ../sass/_header.scss */
+.pinterest {
+  background-image: url("../resources/images/pinterest.png");
+  animation: socialBack 0.15s linear 0s forwards;
+}
+
+/* line 71, ../sass/_header.scss */
+.google {
+  background-image: url("../resources/images/google.png");
+  animation: socialBack 0.2s linear 0s forwards;
+}
+
+/* line 71, ../sass/_header.scss */
+.youtube {
+  background-image: url("../resources/images/youtube.png");
+  animation: socialBack 0.25s linear 0s forwards;
+}
+
+@media all and (max-width: 600px) {
+  /* line 79, ../sass/_header.scss */
+  .header {
+    height: 22em;
+  }
+
+  /* line 82, ../sass/_header.scss */
+  .logo {
+    width: 22.9em;
+    height: 16.1em;
+    top: 3.2em;
+  }
+
+  /* line 88, ../sass/_header.scss */
+  .social {
+    padding: 1.8em 1.4em;
+    top: 4.4em;
+  }
+
+  /* line 92, ../sass/_header.scss */
+  .social-icon {
+    width: 8.4em;
+    height: 8.4em;
+    margin: 0 .7em;
+  }
+
+  /* line 97, ../sass/_header.scss */
+  .close {
+    margin: 1.7em 1em 1.1em 1.8em;
+    width: 5.2em;
+    height: 5.2em;
+  }
+}
+/*-- Home styles --*/
+/* line 3, ../sass/_home.scss */
+.home,
+.category,
+.click {
+  position: absolute;
+}
+
+/* line 8, ../sass/_home.scss */
+.home {
+  width: 100%;
+  height: 45.1em;
+  background-color: white;
+  top: 11.2em;
+}
+
+/* line 14, ../sass/_home.scss */
+.category {
+  width: 39.3em;
+  height: 39.3em;
+  top: 1.4em;
+  cursor: pointer;
+  animation: shrink .25s ease-out 0s forwards;
+}
+/* line 21, ../sass/_home.scss */
+.category:hover {
+  animation: grow .25s ease-out 0s forwards;
+}
+
+/* line 25, ../sass/_home.scss */
+.laptops {
+  left: 9em;
+  background-image: url("../resources/images/laptops.png");
+}
+
+/* line 29, ../sass/_home.scss */
+.health {
+  right: 9em;
+  background-image: url("../resources/images/health.png");
+}
+
+/* line 33, ../sass/_home.scss */
+.click {
+  width: 100%;
+  top: 9.5em;
+  text-align: center;
+  color: #2c7dc9;
+  font-size: 4.2vw;
+  font-family: pt-sans-bold, sans-serif;
+}
+
+@media all and (max-width: 600px) {
+  /* line 44, ../sass/_home.scss */
+  .home {
+    top: 22em;
+    height: calc(100% - 22em);
+  }
+
+  /* line 48, ../sass/_home.scss */
+  .category {
+    top: 35em;
+  }
+
+  /* line 51, ../sass/_home.scss */
+  .click {
+    top: 9em;
+    font-size: 9.2vw;
+  }
+}
+/*-- Loader Styles --*/
+/* line 3, ../sass/_loader.scss */
+.loader,
+.spinner {
+  position: absolute;
+}
+
+/* line 7, ../sass/_loader.scss */
+.loader {
+  width: 100%;
+  height: 45.1em;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 11.2em;
+  opacity: 0;
+  display: none;
+}
+/* line 15, ../sass/_loader.scss */
+.loader.active {
+  animation: fadeIn .25s ease-out 0s forwards;
+  display: block;
+}
+
+/* line 20, ../sass/_loader.scss */
+.spinner {
+  top: calc((100% - 19em)/2);
+  left: calc((100% - 19em)/2);
+  width: 19em;
+  height: 19em;
+  background-image: url("../resources/images/spinner.png");
+  animation: spin 1s ease-out 0s infinite;
+}
+
+@media all and (max-width: 600px) {
+  /* line 31, ../sass/_loader.scss */
+  .loader {
+    top: 22em;
+    height: calc(100% - 22em);
+  }
+
+  /* line 35, ../sass/_loader.scss */
+  .spinner {
+    top: calc((100% - 35em)/2);
+    left: calc((100% - 35em)/2);
+    width: 35em;
+    height: 35em;
+  }
+}
+/*-- Gallery Styles --*/
+/* line 3, ../sass/_gallery.scss */
+.gallery,
+.product,
+.product-image,
+.image-container,
+.product-info,
+.info-container,
+.arrow {
+  position: absolute;
+}
+
+/* line 12, ../sass/_gallery.scss */
+.gallery,
+.product {
+  width: 100%;
+  height: 45.1em;
+  background-color: white;
+}
+
+/* line 18, ../sass/_gallery.scss */
+.gallery {
+  display: none;
+  overflow: hidden;
+}
+/* line 22, ../sass/_gallery.scss */
+.gallery.active {
+  display: block;
+}
+/* line 25, ../sass/_gallery.scss */
+.gallery * {
+  color: #2c7dc9;
+}
+
+/* line 29, ../sass/_gallery.scss */
+.product {
+  transform: translateX(100em);
+}
+/* line 32, ../sass/_gallery.scss */
+.product.active {
+  animation: slideLeft .5s ease-out 0s forwards;
+}
+/* line 35, ../sass/_gallery.scss */
+.product.back-active {
+  animation: slideRight .5s ease-out 0s forwards;
+}
+
+/* line 39, ../sass/_gallery.scss */
+.product-image,
+.product-info {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 44, ../sass/_gallery.scss */
+.image-container {
+  height: 100%;
+  width: 53.4em;
+  left: 0;
+}
+
+/* line 49, ../sass/_gallery.scss */
+.product-image {
+  max-width: 46.8em;
+  max-height: 31.4em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 55, ../sass/_gallery.scss */
+.product-info {
+  width: 46.9em;
+  height: 36.4em;
+  right: 0;
+  border-left: .2em solid black;
+}
+
+/* line 61, ../sass/_gallery.scss */
+.info-container,
+.arrow {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 66, ../sass/_gallery.scss */
+.info-container {
+  width: 100%;
+}
+
+/* line 69, ../sass/_gallery.scss */
+.product-price,
+.product-name,
+.product-description,
+.product-cta {
+  position: relative;
+  margin: 0 0 0 4.9vw;
+  display: block;
+}
+
+/* line 77, ../sass/_gallery.scss */
+.product-price,
+.product-cta {
+  font-family: pt-sans-bold, sans-serif;
+}
+
+/* line 81, ../sass/_gallery.scss */
+.product-price {
+  font-size: 4.5em;
+  margin: 0 0 1vw 4.9vw;
+}
+
+/* line 85, ../sass/_gallery.scss */
+.product-name,
+.product-description {
+  font-size: 1.9em;
+  line-height: 2.5vw;
+  width: 34vw;
+}
+
+/* line 91, ../sass/_gallery.scss */
+.product-cta {
+  background-color: #eb7400;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 33.1vw;
+  height: 5.8vw;
+  border-radius: 1vw;
+  font-size: 3vw;
+  line-height: 5.8vw;
+  text-align: center;
+  margin: 1vw 0 0 4.9vw;
+  animation: shrink .25s ease-out 0s forwards;
+  transform-origin: left;
+}
+/* line 106, ../sass/_gallery.scss */
+.product-cta:hover {
+  animation: grow .25s ease-out 0s forwards;
+}
+
+/* line 110, ../sass/_gallery.scss */
+.arrow {
+  width: 2.9em;
+  height: 7.1em;
+  right: 0;
+  background-image: url("../resources/images/arrow-right.png");
+  cursor: pointer;
+}
+/* line 117, ../sass/_gallery.scss */
+.arrow.hide {
+  display: none;
+}
+
+/* line 121, ../sass/_gallery.scss */
+.arrow-left {
+  left: 0;
+  background-image: url("../resources/images/arrow-left.png");
+}
+
+@media all and (max-width: 600px) {
+  /* line 128, ../sass/_gallery.scss */
+  .gallery {
+    top: 22em;
+    height: calc(100% - 22em);
+    width: 100%;
+  }
+
+  /* line 133, ../sass/_gallery.scss */
+  .product {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  /* line 139, ../sass/_gallery.scss */
+  .product.product-health .product-image {
+    height: 80%;
+    width: auto;
+  }
+
+  /* line 145, ../sass/_gallery.scss */
+  .image-container,
+  .product-info {
+    height: 50%;
+    width: 100%;
+  }
+
+  /* line 150, ../sass/_gallery.scss */
+  .product-info {
+    top: 50%;
+    transform: translateX(0);
+    border: none;
+  }
+
+  /* line 155, ../sass/_gallery.scss */
+  .product-image {
+    width: 80%;
+    max-height: 80%;
+    max-width: 80%;
+  }
+
+  /* line 160, ../sass/_gallery.scss */
+  .product-price {
+    font-size: 11.5em;
+    margin: 0 0 3vw 4.9vw;
+  }
+
+  /* line 164, ../sass/_gallery.scss */
+  .product-name,
+  .product-description {
+    font-size: 4.3vw;
+    line-height: 5.2vw;
+    width: 93vw;
+  }
+
+  /* line 170, ../sass/_gallery.scss */
+  .product-description {
+    font-size: 3.6vw;
+    line-height: 4.3vw;
+    margin: 3vw 0 0 4.9vw;
+  }
+
+  /* line 175, ../sass/_gallery.scss */
+  .product-cta {
+    margin: 4vw 0 0 4.9vw;
+    border-radius: 3vw;
+    font-size: 7vw;
+    line-height: 11.8vw;
+    width: 90.1vw;
+    height: 11.8vw;
+    animation: none;
+  }
+  /* line 184, ../sass/_gallery.scss */
+  .product-cta:hover {
+    animation: none;
+  }
+
+  /* line 188, ../sass/_gallery.scss */
+  .arrow {
+    top: 47%;
+    width: 10.9em;
+    height: 14.1em;
+  }
+}

@@ -1,0 +1,41 @@
+/*-- Loader Styles --*/
+
+.loader,
+.spinner {
+	position: absolute;
+}
+.loader {
+	width: 100%;
+	height: 45.1em;
+	background-color: rgba(255,255,255,.7);
+	top: 11.2em;
+	opacity: 0;
+	display: none;
+
+	&.active {
+		animation: fadeIn .25s ease-out 0s forwards;
+		display: block;
+	}
+}
+.spinner {
+	top: calc((100% - 19em)/2);
+	left: calc((100% - 19em)/2);
+	width: 19em;
+	height: 19em;
+	background-image: url('../resources/images/spinner.png');
+	animation: spin 1s ease-out 0s infinite;
+}
+
+// Mobile Styling
+@media all and (max-width: 600px) {
+	.loader {
+		top: 22em;
+		height: calc(100% - 22em);
+	}
+	.spinner {
+	    top: calc((100% - 35em)/2);
+	    left: calc((100% - 35em)/2);
+	    width: 35em;
+	    height: 35em;
+	}
+}

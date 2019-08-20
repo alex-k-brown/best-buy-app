@@ -1,0 +1,97 @@
+/*-- General Styles --*/
+
+// Fonts
+
+@font-face {
+    font-family: pt-sans;
+    src: url(../resources/PT_Sans-Web-Regular.ttf);
+}
+
+@font-face {
+    font-family: pt-sans-bold;
+    src: url(../resources/PT_Sans-Web-Bold.ttf);
+}
+
+// Colors
+
+$bestBuyBlue: #2c7dc9;
+$ctaOrange: #eb7400;
+
+// Animations
+
+@keyframes rotate {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(135deg); }
+}
+@keyframes rotateBack {
+	0% { transform: rotate(135deg); }
+	100% { transform: rotate(0deg); }
+}
+@keyframes social {
+	0% { width: 5.4em; margin: 0 .4em; }
+	99% { width: 5.4em; margin: 0 .4em; }
+	100% { width: 0em; margin: 0; }
+}
+@keyframes socialBack {
+	0% { width: 0em; margin: 0em; }
+	99% { width: 0em; margin: 0em; }
+	100% { width: 5.4em; margin: 0 .4em; }
+}
+@keyframes grow {
+	0% { transform: scale(1); }
+	100% { transform: scale(1.1); }
+}
+@keyframes shrink {
+	0% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+@keyframes slideLeft {
+	0% { transform: translateX(100em); }
+	100% { transform: translateX(0em); }
+}
+@keyframes slideRight {
+	0% { transform: translateX(-100em); }
+	100% { transform: translateX(0em); }
+}
+
+.container {
+	width: 100%;
+	position: absolute;
+	font-size: 1vw;
+	height: 56.3em;
+	background-color: white;
+
+	* {
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		font-family: pt-sans, sans-serif;
+		transform-origin: 50% 50%;
+	}
+}
+
+// Mobile styling
+@media all and (max-width: 600px) {
+	@keyframes social {
+		0% { width: 8.4em; margin: 0 .7em; }
+		99% { width: 8.4em; margin: 0 .7em; }
+		100% { width: 0em; margin: 0; }
+	}
+	@keyframes socialBack {
+		0% { width: 0em; margin: 0em; }
+		99% { width: 0em; margin: 0em; }
+		100% { width: 8.4em; margin: 0 .7em; }
+	}
+
+	.container {
+		height: 160em;
+	}
+}
